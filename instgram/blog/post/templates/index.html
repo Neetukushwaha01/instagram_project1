@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .like_area{
+        position: relative;
+        }
+        .likes_list{
+            display: none;
+            position: absolute;
+            top: 100%;
+            padding: 20px;
+            background: #e5e5e5;
+            z-index: 9;
+            border: solid 1px #dedede;
+        }
+        .like_area:hover .likes_list{
+            display: block;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="bg-dark text-white">
+    <div class="container p-4">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <h2>INSTAGRAM</h2>
+
+        <!--        <img src="https://flyclipart.com/thumb2/instagram-text-logo-83656.png" width="400px">-->
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+
+        {% for i in post%}
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-header"><i class="fa fa-user" aria-hidden="true"></i>{{i.auther}}
+                    <div class="text-muted"><small>{{i.created_at}}</small></div>
+                </div>
+                <div style="overflow: hidden;height: 320px;">
+                    <img class="card-img-top" src="/media/{{i.image}}" width="100%">
+                </div>
+                <div class="card-body">
+                    <div class="text-muted">{{i.desc}}</div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="like_area">
+                        <a href="#" class="btn btn-link">like <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            ({{i.like.count}})
+                        </a>
+                        <ul class="likes_list">
+                            {%for user in i.like.all%}
+                            <li><a href="">{{user}}</a></li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-link"> Comment</a>
+
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div><input class="form-control" placeholder="Type Comments"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor%}
+    </div>
+    <div class="row">
+
+        {% for i in post%}
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-header"><i class="fa fa-user" aria-hidden="true"></i>{{i.auther}}
+                    <div class="text-muted"><small>{{i.created_at}}</small></div>
+                </div>
+                <div style="overflow: hidden;height: 320px;">
+                    <img class="card-img-top" src="/media/{{i.image}}" width="100%">
+                </div>
+                <div class="card-body">
+                    <div class="text-muted">{{i.desc}}</div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="like_area">
+                        <a href="#" class="btn btn-link">like <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            ({{i.like.count}})
+                        </a>
+                        <ul class="likes_list">
+                            {%for user in i.like.all%}
+                            <li><a href="">{{user}}</a></li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-link"> Comment</a>
+
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div><input class="form-control" placeholder="Type Comments"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor%}
+
+    </div>
+    <div class="row">
+
+        {% for i in post%}
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-header"><i class="fa fa-user" aria-hidden="true"></i>{{i.auther}}
+                    <div class="text-muted"><small>{{i.created_at}}</small></div>
+                </div>
+                <div style="overflow: hidden;height: 320px;">
+                    <img class="card-img-top" src="/media/{{i.image}}" width="100%">
+                </div>
+                <div class="card-body">
+                    <div class="text-muted">{{i.desc}}</div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="like_area">
+                        <a href="#" class="btn btn-link">like <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            ({{i.like.count}})
+                        </a>
+                        <ul class="likes_list">
+                            {%for user in i.like.all%}
+                            <li><a href="">{{user}}</a></li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-link"> Comment</a>
+
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div><input class="form-control" placeholder="Type Comments"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor%}
+
+    </div>
+    <div class="row">
+
+        {% for i in post%}
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-header"><i class="fa fa-user" aria-hidden="true"></i>{{i.auther}}
+                    <div class="text-muted"><small>{{i.created_at}}</small></div>
+                </div>
+                <div style="overflow: hidden;height: 320px;">
+                    <img class="card-img-top" src="/media/{{i.image}}" width="100%">
+                </div>
+                <div class="card-body">
+                    <div class="text-muted">{{i.desc}}</div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="like_area">
+                        <a href="#" class="btn btn-link">like <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            ({{i.like.count}})
+                        </a>
+                        <ul class="likes_list">
+                            {%for user in i.like.all%}
+                            <li><a href="">{{user}}</a></li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-link"> Comment</a>
+
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div><input class="form-control" placeholder="Type Comments"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor%}
+    </div>
+    <div class="row">
+
+        {% for i in post%}
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-header"><i class="fa fa-user" aria-hidden="true"></i>{{i.auther}}
+                    <div class="text-muted"><small>{{i.created_at}}</small></div>
+                </div>
+                <div style="overflow: hidden;height: 320px;">
+                    <img class="card-img-top" src="/media/{{i.image}}" width="100%">
+                </div>
+                <div class="card-body">
+                    <div class="text-muted">{{i.desc}}</div>
+
+
+                </div>
+                <div class="card-footer">
+                    <div class="like_area">
+                        <a href="#" class="btn btn-link">like <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                            ({{i.like.count}})
+                        </a>
+                        <ul class="likes_list">
+                            {%for user in i.like.all%}
+                            <li><a href="">{{user}}</a></li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-link"> Comment</a>
+
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div><input class="form-control" placeholder="Type Comments"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor%}
+
+    </div>
+</div>
+</body>
+</html>
